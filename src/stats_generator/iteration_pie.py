@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import os
 
 # === Configuration ===
-INPUT_FILE = "experiments/experiment_optimized_real_final_ner_500.csv"
+INPUT_FILE = "../experiments/experiment_optimized_real_final_ner_500.csv"
 OUTPUT_FILE = "pie_iteration_ner.png"
-OUTPUT_DIR = "statistics"
+OUTPUT_DIR = "../statistics"
 
 # === Load Data ===
 df = pd.read_csv(INPUT_FILE)
