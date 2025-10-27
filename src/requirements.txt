@@ -1,0 +1,12 @@
+networkx==3.5
+graphrag==2.6.0        #for the microsoft experiment
+langchain==0.3.17
+langchain-openai==0.3.3
+openai==1.109.1
+sentence-transformers==3.4.1
+spacy==3.8.7
+en_core_web_sm==3.8.0  
+lancedb==0.25.1        
+bert-score==0.3.13
+nltk==3.9.1
+pandas==2.3.2
