@@ -2,19 +2,16 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-SUMMARY_CSV = "../stats_camera_ready/mean_no_ner.csv"
-STOPPED_CSV = "../stats_camera_ready/q_stopped_at_iteration_no_ner.csv"
-OUT_PNG = "../stats_camera_ready/graph_metrics_no_ner_all.png"
+SUMMARY_CSV = "../stats_camera_ready/mean_ner.csv"
+STOPPED_CSV = "../stats_camera_ready/q_stopped_at_iteration_ner.csv"
+OUT_PNG = "../stats_camera_ready/graph_metrics_ner.png"
 
-METRICS_WANTED = ["faithfulness", "completeness", "relevance", "bertscore_f1", "rougeL", "bleu", "cosine_sim"]
+METRICS_WANTED = ["faithfulness", "completeness", "relevance", "bertscore_f1"]
 LABELS = {
     "faithfulness": "Faithfullness",
     "completeness": "Completeness",
     "relevance": "Relevance",
-    "bertscore_f1": "BertScore",
-    "rougeL": "ROUGE-L",
-    "bleu": "BLEU",
-    "cosine_sim": "Cosine Similarity"
+    "bertscore_f1": "BertScore"
 }
 
 
@@ -83,7 +80,7 @@ plt.plot(x, cumulative_stop_rate, marker="o", label="Cumulative stop rate")
 
 plt.xticks([1, 2, 3, 4])
 plt.ylim(0, 1)
-plt.xlabel("Iteration snapshot KGiRAG")
+plt.xlabel("Iteration snapshot KGiRAG with NER")
 plt.ylabel("Score / Rate")
 plt.grid(True, which="both")
 plt.legend()
