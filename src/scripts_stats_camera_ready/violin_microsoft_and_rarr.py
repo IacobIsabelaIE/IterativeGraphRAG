@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-INPUT_CSV = "../experiments/rarr_metrics_final_review.csv"
-OUT_PNG = "../stats_camera_ready/violin_rarr.png"
+INPUT_CSV = "../experiments/results_final_1_microsoft.csv"
+OUT_PNG = "../stats_camera_ready/violin_microsoft.png"
 
 # Metrics to plot (match your QA CSV column names)
 METRICS = [
@@ -55,7 +55,7 @@ plt.xticks(
 )
 plt.ylim(0, 1)
 plt.ylabel("Score")
-plt.title("Score density distribution evaluation metrics for KGiRAG")
+plt.title("Score density distribution evaluation metrics for Edge et al.")
 
 plt.grid(True, axis="y", alpha=0.4, linestyle="--")
 plt.tight_layout()

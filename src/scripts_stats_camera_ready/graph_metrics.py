@@ -4,15 +4,19 @@ import matplotlib.pyplot as plt
 
 SUMMARY_CSV = "../stats_camera_ready/mean_no_ner.csv"
 STOPPED_CSV = "../stats_camera_ready/q_stopped_at_iteration_no_ner.csv"
-OUT_PNG = "../stats_camera_ready/graph_metrics_no_ner.png"
+OUT_PNG = "../stats_camera_ready/graph_metrics_no_ner_all.png"
 
-METRICS_WANTED = ["faithfulness", "completeness", "relevance", "bertscore_f1"]
+METRICS_WANTED = ["faithfulness", "completeness", "relevance", "bertscore_f1", "rougeL", "bleu", "cosine_sim"]
 LABELS = {
     "faithfulness": "Faithfullness",
     "completeness": "Completeness",
     "relevance": "Relevance",
     "bertscore_f1": "BertScore",
+    "rougeL": "ROUGE-L",
+    "bleu": "BLEU",
+    "cosine_sim": "Cosine Similarity"
 }
+
 
 def parse_combined_summary_csv(path: str, metrics=METRICS_WANTED) -> pd.DataFrame:
     # Read as raw rows with 3 columns: metric, mean, std
@@ -79,7 +83,7 @@ plt.plot(x, cumulative_stop_rate, marker="o", label="Cumulative stop rate")
 
 plt.xticks([1, 2, 3, 4])
 plt.ylim(0, 1)
-plt.xlabel("Iteration snapshot (1..4)")
+plt.xlabel("Iteration snapshot KGiRAG")
 plt.ylabel("Score / Rate")
 plt.grid(True, which="both")
 plt.legend()

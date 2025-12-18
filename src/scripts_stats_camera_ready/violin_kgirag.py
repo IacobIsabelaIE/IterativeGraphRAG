@@ -59,7 +59,7 @@ plt.xticks(
 )
 plt.ylim(0, 1)
 plt.ylabel("Score")
-plt.title("Score density distribution evaluation metrics for KGiRAG")
+plt.title("Score density distribution evaluation metrics for KGiRAG with NER")
 
 plt.grid(True, axis="y", alpha=0.4, linestyle="--")
 plt.tight_layout()
