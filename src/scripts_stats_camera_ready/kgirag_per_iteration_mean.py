@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 INPUT_CSV = "../experiments/experiment_optimized_real_final_ner_500.csv"
-OUTPUT_CSV = "../stats_camera_ready/ner.csv"
+OUTPUT_CSV = "../stats_camera_ready/mean_ner.csv"
 
 # Metrics to summarize
 METRICS = [
