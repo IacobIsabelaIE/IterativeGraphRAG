@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-INPUT_CSV = "../experiments/experiment_optimized_real_final_no_ner_500.csv"
-OUTPUT_CSV = "../stats_per_iteration_csv/no_ner.csv"
+INPUT_CSV = "../experiments/experiment_optimized_real_final_ner_500.csv"
+OUTPUT_CSV = "../stats_camera_ready/ner.csv"
 
 # Metrics to summarize
 METRICS = [

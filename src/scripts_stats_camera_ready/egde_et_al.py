@@ -1,7 +1,7 @@
 import pandas as pd
 
-INPUT_CSV = "../experiments/results_final_1_microsoft.csv"
-OUTPUT_CSV = "../stats_per_iteration_csv/edge_et_al.csv"
+INPUT_CSV = "../experiments/rarr_metrics_final_review.csv"
+OUTPUT_CSV = "../stats_per_iteration_csv/rarr.csv"
 
 METRICS = [
     "faithfulness",
