@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-INPUT_CSV = "../experiments/experiment_optimized_real_final_ner_500.csv"
-OUT_PNG = "../stats_camera_ready/violin_ner.png"
+INPUT_CSV = "../experiments/experiment_optimized_real_final_no_ner_500.csv"
+OUT_PNG = "../stats_camera_ready/violin_no_ner.png"
 
 # Metrics to plot (match your QA CSV column names)
 METRICS = [
@@ -11,7 +11,7 @@ METRICS = [
     "completeness",
     "relevance",
     "bertscore_f1",
-    "rougeL"
+    "cosine_sim"
 ]
 
 # Display labels (optional)
@@ -20,7 +20,7 @@ LABELS = {
     "completeness": "completeness",
     "relevance": "relevance",
     "bertscore_f1": "BERTScore",
-    "rougeL": "rougeL"
+    "cosine_sim": "cosine similarity"
 }
 
 df = pd.read_csv(INPUT_CSV)
@@ -59,7 +59,7 @@ plt.xticks(
 )
 plt.ylim(0, 1)
 plt.ylabel("Score")
-plt.title("Score density distribution evaluation metrics for KGiRAG with NER")
+plt.title("Score density distribution evaluation metrics for KGiRAG")
 
 plt.grid(True, axis="y", alpha=0.4, linestyle="--")
 plt.tight_layout()
