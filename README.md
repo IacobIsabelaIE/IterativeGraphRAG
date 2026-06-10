@@ -60,3 +60,28 @@ python main_with_ner.py
 | Cosine Similarity  | 0.325 ± 0.02692         | 0.52 ± 0.01828        | 0.075 ± 0.01831          | 0.33 ± 0.02427     |
 
 **Table 1.** Comparison of retrieval architectures across evaluation metrics (mean ± margin of error for the 95% confidence intervals).
+
+
+
+## Citation
+
+This project is based on the paper:
+
+**KGiRAG: An Iterative GraphRAG Approach for Responding Sensemaking Queries**  
+Isabela Iacob, Melisa Marian, Gheorghe Cosmin Silaghi (2026)
+
+Paper: https://arxiv.org/abs/2604.20859
+
+If you use this repository in your research, please cite:
+
+```bibtex
+@misc{iacob2026kgiragiterativegraphragapproach,
+      title={KGiRAG: An Iterative GraphRAG Approach for Responding Sensemaking Queries},
+      author={Isabela Iacob and Melisa Marian and Gheorghe Cosmin Silaghi},
+      year={2026},
+      eprint={2604.20859},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR},
+      url={https://arxiv.org/abs/2604.20859}
+}
+```
